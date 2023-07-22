@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 90%;
+    margin-top: 20px;
+    background-color: bisque;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;  /*justificando para o centro da tela a imagem */
+    align-items: center; /*justificando para o centro da tela a imagem */
+    flex-wrap: wrap; /*garantia que terei um elemento por linha, ou seja, um abaixo do outro*/
+    flex-direction: column; /*colocando cada elemento em uma coluna*/
+
+}
+
+#imagem{
+    background-image: url(../img/forca.png);
+    width: 234px;
+    height: 272px;
+    background-repeat: no-repeat; /* para não repetir a imagem  */
+}
+
+#underline{
+    display: flex;
+    flex-direction: row; /*elementos um ao lado do outro, em linha*/
+    justify-content: center; /*ajustando o conteúdo para o centro*/
+    align-items: center; /*alinhando o item par ao centro*/
+    font-size: 1em; /*ajustando o tamanho da fonte*/
+    margin-top: 40px;
+}
+
+.letras{
+    width: 20px;
+    text-align: center; /*alinhando o texto ao centro*/
+    border-bottom: 2px solid black;
+    margin-left: 10px;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.letrasEspaco{
+    width: 20px;
+    text-align: center; /*alinhando o texto ao centro*/
+    margin-left: 10px;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#teclado{
+    margin-top: 30px;
+
+}
+
+.teclas button{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    margin-bottom: 2px;
+    cursor: pointer; /*quando eu passar o mouse em cima da letra o cursor irá mudar*/
+    box-shadow: 0px 2px 8px rgba(22, 22, 22, 0.336);
+    border-radius: 4px;
+    border: 1px solid rgba(22, 22, 22, 0.336);
+    font-weight: 800; /*efeito de "negrito" na fonte*/
+}
+
+.teclas button:disabled{
+    cursor: not-allowed; /*quando ele estiver na condição de desabilitado muda o cursor para não habilitado.*/
+}
+
+.teclas button:hover{
+    color:brown; /*quando passar o mouse em cima do botão, irá mudar de cor*/
+    transform: scale(1.3); /*efeito de zoom quando passar o cursor no botão*/
+}
+
+#tema{
+    margin-top: 30px;
+    color: brown;
+    font-weight: 560;
+    font-size: 1.5rem; /*tamanho da fonte*/
+}
+
+/*Responsividade*/
+@media(min-width: 320px) {
+    .teclas button{
+        width: 25px;
+        height: 25px;
+    }
+    #underline{
+        font-size: 1.3em;
+    }
+
+    #tema{
+        font-size: 1.3em;
+    }
+}
+
+@media(min-width: 376px) {
+    .teclas button{
+        width: 30px;
+        height: 30px;
+    }
+    #underline{
+        font-size: 1.5em;
+    }
+
+    #letras{
+        width: 20px;
+    }
+
+    #tema{
+        font-size: 1.5em;
+    }
+}
+
+@media(min-width: 426px) {
+    .teclas button{
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+    #underline{
+        font-size: 1.5em;
+    }
+
+    #letras{
+        width: 23px;
+    }
+
+    #tema{
+        font-size: 1.5em;
+    }
+}
+
+@media(min-width: 769px) {
+    .teclas button{
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+    #underline{
+        font-size: 1.5em;
+    }
+
+    #letras{
+        width: 35px;
+    }
+
+    #tema{
+        font-size: 2.6em;
+    }
+}
